@@ -16,7 +16,7 @@ export default function End(props) {
     ) {
       setType("약간 게이");
     } else if (
-      Number(queryString.split("=")[1]) > 0 &&
+      Number(queryString.split("=")[1]) >= 0 &&
       Number(queryString.split("=")[1]) < 10
     ) {
       setType("정상인");

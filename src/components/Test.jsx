@@ -47,6 +47,7 @@ export default function Test() {
               onClick={() => {
                 setCurProblemIdx((prev) => {
                   if (prev == 24) {
+                    console.log(prev);
                     navigate(`/end?score=${score}`);
                   } else {
                     return prev + 1;
