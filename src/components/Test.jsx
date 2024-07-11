@@ -31,28 +31,27 @@ export default function Test() {
           <div>
             <div
               onClick={() => {
-                setScore((prev) => {
+                setScore((prev) => prev + 1);
+                setCurProblemIdx((prev) => {
                   if (prev == 24) {
                     navigate(`/end?score=${score + 1}`);
                   } else {
                     return prev + 1;
                   }
                 });
-                setCurProblemIdx((prev) => prev + 1);
               }}
             >
               O
             </div>
             <div
               onClick={() => {
-                setScore((prev) => {
+                setCurProblemIdx((prev) => {
                   if (prev == 24) {
                     navigate(`/end?score=${score}`);
                   } else {
-                    return prev;
+                    return prev + 1;
                   }
                 });
-                setCurProblemIdx((prev) => prev + 1);
               }}
             >
               X
