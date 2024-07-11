@@ -8,7 +8,7 @@ export default function End(props) {
   const [type, setType] = useState("");
 
   useEffect(() => {
-    if (Number(queryString.split("=")[1]) > 20) {
+    if (Number(queryString.split("=")[1]) >= 20) {
       setType("게이");
     } else if (
       Number(queryString.split("=")[1]) > 10 &&
@@ -17,7 +17,7 @@ export default function End(props) {
       setType("약간 게이");
     } else if (
       Number(queryString.split("=")[1]) >= 0 &&
-      Number(queryString.split("=")[1]) < 10
+      Number(queryString.split("=")[1]) <= 10
     ) {
       setType("정상인");
     }
